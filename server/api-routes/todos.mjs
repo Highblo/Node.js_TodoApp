@@ -1,17 +1,23 @@
-import express from 'express';
-import { body } from 'express-validator';
-import { addData, deleteData, getAllData, getData, patchData } from '../controllers/apiTodos.mjs';
+import express from "express";
+import { body } from "express-validator";
+import {
+  addTodo,
+  deleteTodo,
+  getAllTodos,
+  getTodo,
+  patchTodo,
+} from "../controllers/apiTodos.mjs";
 
 const router = express.Router();
 
-router.get('/', getAllData);
+router.get("/", getAllTodos);
 
-router.get('/:id', getData);
+router.get("/:id", getTodo);
 
-router.delete('/:id', deleteData);
+router.delete("/:id", deleteTodo);
 
-router.post('/', body('todo').notEmpty(), addData);
+router.post("/", body("todo").notEmpty(), addTodo);
 
-router.patch('/:id', body('todo').notEmpty(), patchData);
+router.patch("/:id", body("todo").notEmpty(), patchTodo);
 
 export default router;
