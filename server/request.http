@@ -2,3 +2,25 @@ GET http://localhost:8080
 
 ###
 GET http://localhost:8080/todos
+
+###
+GET http://localhost:8080/todos/651cfc3b8bcf5e4b1afa9040
+###
+
+DELETE http://localhost:8080/todos/651cfc3b8bcf5e4b1afa9040
+
+###
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "todo": "テストデータ"
+}
+
+###
+PATCH http://localhost:8080/todos/651d0a7dba797c827bbd46fa
+Content-Type: application/json
+
+{
+  "todo": "テストデータpatch"
+}

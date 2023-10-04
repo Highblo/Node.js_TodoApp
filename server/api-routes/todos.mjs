@@ -1,12 +1,17 @@
 import express from 'express';
-import Todo from '../models/todo.mjs';
+import { body } from 'express-validator';
+import { addData, deleteData, getAllData, getData, patchData } from '../controllers/apiTodos.mjs';
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-  // dbから全データを取得
-  const todos = await Todo.find();
-  res.json(todos);
-});
+router.get('/', getAllData);
+
+router.get('/:id', getData);
+
+router.delete('/:id', deleteData);
+
+router.post('/', body('todo').notEmpty(), addData);
+
+router.patch('/:id', body('todo').notEmpty(), patchData);
 
 export default router;
