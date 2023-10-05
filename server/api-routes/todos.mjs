@@ -1,10 +1,10 @@
 import express from "express";
 import { body } from "express-validator";
 import {
-  addTodo,
-  deleteTodo,
   getAllTodos,
   getTodo,
+  deleteTodo,
+  addTodo,
   patchTodo,
 } from "../controllers/apiTodos.mjs";
 
