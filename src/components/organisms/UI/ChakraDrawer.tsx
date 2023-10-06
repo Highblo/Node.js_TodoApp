@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import {
   Drawer,
   DrawerBody,
@@ -10,8 +10,9 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-import { drawerData } from "../../datas/drawerData";
 import Logo from "../../molcules/Logo";
+import { drawerDatas } from "../../datas/drawerDatas";
+import { snsDatas } from "../../datas/snsDatas";
 
 type Props = {
   isOpen: boolean;
@@ -29,18 +30,30 @@ const ChakraDrawer: FC<Props> = ({ isOpen, onClose }) => {
         </DrawerHeader>
 
         <DrawerBody>
-          <ul className="space-y-5">
-            {drawerData.map(({ icon, text, title, hr }) => (
-              <Fragment key={text}>
-                <li className="flex items-center gap-2">
-                  {icon}
-                  <p>{text}</p>
+          <div className="space-y-5">
+            <ul className="space-y-2">
+              {drawerDatas.map(({ icon, text, url }) => (
+                <li className="rounded-lg p-2 transition duration-300 hover:bg-slate-200">
+                  <a href={url} className="flex items-center gap-2">
+                    {icon}
+                    <p>{text}</p>
+                  </a>
                 </li>
-                {hr ? hr : null}
-                {title ? <h2 className="text-lg font-bold">{title}</h2> : null}
-              </Fragment>
-            ))}
-          </ul>
+              ))}
+            </ul>
+            <hr />
+            <h2 className="text-lg font-bold">SNS</h2>
+            <ul className="space-y-2">
+              {snsDatas.map(({ icon, text, url }) => (
+                <li className="rounded-lg p-2 transition duration-300 hover:bg-slate-200">
+                  <a href={url} className="flex items-center gap-2">
+                    {icon}
+                    <p>{text}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </DrawerBody>
 
         <DrawerFooter>

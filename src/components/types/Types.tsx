@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 
-export type DrawerDataType = {
+export type listType = {
   icon: ReactNode;
   text: string;
-  title?: string;
-  hr?: ReactNode;
-}
+  url: string;
+};
