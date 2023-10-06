@@ -6,7 +6,7 @@ import { snsDatas } from "../datas/snsDatas";
 
 const Footer: FC = () => {
   return (
-    <div className="bg-slate-700 text-slate-50 text-sm space-y-10 p-5">
+    <div className="bg-slate-700 text-slate-50 text-sm space-y-10 p-5 md:text-base">
       <div className="flex justify-around">
         <List title="開発者について">
           <li className="hover:underline">
