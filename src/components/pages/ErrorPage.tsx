@@ -8,8 +8,8 @@ const ErrorPage: FC = () => {
 
   return (
     <Layout>
-      <div className="flex-1 grid place-items-center">
-        <div className="space-y-9 text-center">
+      <div className="flex-1 flex justify-center items-center">
+        <div className="space-y-6 text-center">
           <h1 className="text-5xl">Oops!</h1>
           <p>Sorry, an unexpected error has occurred.</p>
           <p className="italic">
