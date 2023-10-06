@@ -5,7 +5,7 @@ import Layout from "../templetes/Layout";
 const Login: FC = () => {
   return (
     <Layout>
-      <div>Login</div>
+      <div className="flex-1">Login</div>
     </Layout>
   );
 };
