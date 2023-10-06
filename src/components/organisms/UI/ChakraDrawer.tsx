@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 import { drawerData } from "../../datas/drawerData";
+import Logo from "../../molcules/Logo";
 
 type Props = {
   isOpen: boolean;
@@ -23,7 +24,9 @@ const ChakraDrawer: FC<Props> = ({ isOpen, onClose }) => {
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
-        <DrawerHeader>TodoApp</DrawerHeader>
+        <DrawerHeader>
+          <Logo />
+        </DrawerHeader>
 
         <DrawerBody>
           <ul className="space-y-5">

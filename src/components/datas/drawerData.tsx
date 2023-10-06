@@ -7,7 +7,9 @@ import { SiQiita } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
 import { SiZenn } from "react-icons/si";
 
-export const drawerData = [
+import { DrawerDataType } from "../types/Types";
+
+export const drawerData: Array<DrawerDataType> = [
   {
     icon: <BiLogIn size={20} />,
     text: "ログイン",
