@@ -33,7 +33,10 @@ const ChakraDrawer: FC<Props> = ({ isOpen, onClose }) => {
           <div className="space-y-5">
             <ul className="space-y-2">
               {drawerDatas.map(({ icon, text, url }) => (
-                <li className="rounded-lg p-2 transition duration-300 hover:bg-slate-200">
+                <li
+                  key={text}
+                  className="rounded-lg p-2 transition duration-300 hover:bg-slate-200"
+                >
                   <a href={url} className="flex items-center gap-2">
                     {icon}
                     <p>{text}</p>
@@ -45,7 +48,10 @@ const ChakraDrawer: FC<Props> = ({ isOpen, onClose }) => {
             <h2 className="text-lg font-bold">SNS</h2>
             <ul className="space-y-2">
               {snsDatas.map(({ icon, text, url }) => (
-                <li className="rounded-lg p-2 transition duration-300 hover:bg-slate-200">
+                <li
+                  key={text}
+                  className="rounded-lg p-2 transition duration-300 hover:bg-slate-200"
+                >
                   <a href={url} className="flex items-center gap-2">
                     {icon}
                     <p>{text}</p>
