@@ -5,3 +5,9 @@ export type listType = {
   text: string;
   url: string;
 };
+
+export type ButtonType = {
+  url: string;
+  children: ReactNode;
+  css: string;
+}
