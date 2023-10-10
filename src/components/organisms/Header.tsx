@@ -14,7 +14,7 @@ const Header: FC = () => {
       <Logo />
       {/* Mobile */}
       <img
-        src="src/images/menu.png"
+        src="images/menu.png"
         alt="メニュー"
         className="w-[30px] md:hidden"
         onClick={onOpen}
